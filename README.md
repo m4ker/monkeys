@@ -33,5 +33,5 @@ http://www.golaravel.com/laravel/docs/5.1
 
 ## view 的使用
 
-
+http://www.golaravel.com/laravel/docs/5.1/views/
 
