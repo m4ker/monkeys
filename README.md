@@ -25,11 +25,13 @@ http://www.golaravel.com/laravel/docs/5.1
 
 ## model的使用
 
-1. 创建一个model可以使用 ./artisan make:model mname命令，会在app/下生成相应文件。
+1. 使用model请先配置数据库 .env 和 config/database.php
 
-2. 在controller连接数据库需要先 use DB; 用法请参考 数据库小节。 
+2. 创建一个model可以使用 ./artisan make:model mname命令，会在app/下生成相应文件。
 
-3. 使用ORM请参考 Eloquent ORM 小节。
+3. 在controller连接数据库需要先 use DB; 用法请参考 数据库小节。 
+
+4. 使用ORM请参考 Eloquent ORM 小节。
 
 ## view 的使用
 
