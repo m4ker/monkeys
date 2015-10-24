@@ -63,7 +63,7 @@ class UserController extends Controller
                 $user->find_tags = implode(',', array_filter($findTags));
                 if ($user->save()) {
                     //创建不时效的Cookie
-                    return redirect('/event/' . $url . '/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
+                    return redirect('/event/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
                         $user->id);
                 } else {
                     exit('some error 001');
