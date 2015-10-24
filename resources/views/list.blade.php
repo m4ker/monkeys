@@ -67,8 +67,15 @@
     <div class="container">
 
         <h2 class="section-heading text-center">参会人列表</h2>
-        <h3 class="text-muted text-center">北京黑客马拉松</h3>
-
+        <h3 class="text-muted text-center">{{ $channel->name }}</h3>
+        <?php $_COOKIE['userId'] = 1; ?>
+@if(!Cookie::get('userId'))
+        <div class="text-center" style="margin:20px">
+            <a href="/event/{{ $channel->id }}/register" class="btn btn-xl text-center">注册</a>
+        </div>
+        
+@endif
+@foreach ($lists as $list)
         <div class="user-info">
             <table>
                 <tr>
@@ -76,78 +83,27 @@
                         <div class="user-wrapper">
                             <img src="/img/user.png">
                         </div>
-                        <div class="user-name">Tom</div>
+                        <div class="user-name">{{ $list->name }}</div>
                     </td>
                     <td class="user-info-wrapper">
 
                         <div>
                             <span class="user-info-icon"><i class="fa fa-user fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
+                            @foreach(explode(',',$list->tags) as $v)
+                            <span class="user-tag">{{ $v }}</span>
+                            @endforeach
                         </div>
                         <div>
                             <span class="user-info-icon"><i class="fa fa-search fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
+                            @foreach(explode(',',$list->find_tags) as $v)
+                            <span class="user-tag">{{ $v }}</span>
+                            @endforeach
                         </div>
                     </td>
                 </tr>
             </table>
         </div>
-
-        <div class="user-info">
-            <table>
-                <tr>
-                    <td>
-                        <div class="user-wrapper">
-                            <img src="/img/user.png">
-                        </div>
-                        <div class="user-name">Tom</div>
-                    </td>
-                    <td class="user-info-wrapper">
-
-                        <div>
-                            <span class="user-info-icon"><i class="fa fa-user fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
-                        </div>
-                        <div>
-                            <span class="user-info-icon"><i class="fa fa-search fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
-
-        <div class="user-info">
-            <table>
-                <tr>
-                    <td>
-                        <div class="user-wrapper">
-                            <img src="/img/user.png">
-                        </div>
-                        <div class="user-name">Tom</div>
-                    </td>
-                    <td class="user-info-wrapper">
-
-                        <div>
-                            <span class="user-info-icon"><i class="fa fa-user fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
-                        </div>
-                        <div>
-                            <span class="user-info-icon"><i class="fa fa-search fa-lg"></i> :</span>
-                            <span class="user-tag">HTML</span>
-                            <span class="user-tag">HTML</span>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-        </div>
-
+@endforeach
 
     </div>
 </section>

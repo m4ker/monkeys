@@ -87,10 +87,11 @@ class UserController extends Controller
         //获取用户信息
         $user = User::find($uid);
 
+        $channel = Channel::find($user['channel_id']);
         //获取推荐列表
         $users = User::getSuggest($user);
 
-        return view('suggest_list', ['lists' => $users]);
+        return view('list', ['lists' => $users,'channel'=>$channel]);
     }
 
     private function _checkUser($contact, $channelId)

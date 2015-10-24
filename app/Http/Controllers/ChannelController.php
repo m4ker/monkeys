@@ -67,6 +67,6 @@ class ChannelController extends Controller
         //获取当前channel_id 的用户列表
         $users = User::getListByChannelId($channel['id']);
 
-        return view('channel/list', ['lists' => $users]);
+        return view('list', ['lists' => $users,'channel'=>$channel]);
     }
 }
