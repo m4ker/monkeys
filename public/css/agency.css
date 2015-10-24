@@ -7,6 +7,7 @@
 body {
     overflow-x: hidden;
     font-family: "Arial","Heiti SC","Microsoft Yahei",simsun,sans-serif;
+    color: #4A4A4A;
 }
 
 .text-muted {
@@ -348,9 +349,11 @@ section h3.section-subheading {
     text-align: left;
     margin: 50px auto;
     max-width: 100%;
-    width: 410px;
-    background: #EDEDED;
-    padding: 25px;    
+    width: 425px;
+    background: #EAF5E2;
+    padding: 25px;
+    font-size: 16px;
+    line-height: 1.9em;    
 }
 
 .form-div {
