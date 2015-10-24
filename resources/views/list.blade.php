@@ -120,6 +120,8 @@
 
                             <?php if ($className == 'mobile-phone') {?>
                                 <span><a href="tel:{{ $list->contact  }}">{{ $list->contact  }}</a></span>
+                            <?php } else if ($className == 'envelope-o') { ?>
+                            <span><a href="mailto:{{ $list->contact  }}">{{ $list->contact  }}</a></span>
                             <?php } else { ?>
                             <span>{{ $list->contact  }}</span>
                             <?php } ?>
