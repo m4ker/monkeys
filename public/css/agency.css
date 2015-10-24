@@ -118,12 +118,13 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
-.btn-gray {
+.btn-gray, .btn-narrow {
     background-color: #CCC !important;
     border-color: #CCC !important;
 }
 
-.btn-gray:hover, .btn-gray:active {
+.btn-gray:hover, .btn-gray:active,
+.btn-narrow:hover, .btn-narrow:active {
     background-color: #999 !important;
 }
 
