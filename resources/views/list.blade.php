@@ -99,8 +99,12 @@
                         <div>
                             <span class="user-info-icon"><i class="fa fa-search fa-lg"></i> :</span>
                             @foreach(explode(',',$list->find_tags) as $v)
-                            <span class="user-tag">{{ $v }}</span>
+                                <span class="user-tag">{{ $v }}</span>
                             @endforeach
+                        </div>
+                        <div>
+                            <span class="user-info-icon"><i class="fa fa-envelope-o fa-lg"></i> :</span>
+                            <span>{{ $list->contact  }}</span>
                         </div>
                     </td>
                 </tr>
