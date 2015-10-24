@@ -15,7 +15,7 @@ class ChannelController extends Controller
     public function create(Request $request)
     {
         $name = $request->input('name');
-        $link = $request->input('link');
+        $url  = $request->input('url');
         $tags = $request->input('tags');
         //var_dump($_POST);
         //var_dump($name);
@@ -23,7 +23,7 @@ class ChannelController extends Controller
         $error = false;
         if (trim($name) == '') {
             $error = '请填写活动名称！';
-        } else if (trim($link) == '') {
+        } else if (trim($url) == '') {
             $error = '请填写活动地址！';
         } else if (trim($tags) == '') {
             $error = '请填写成员标签！';
@@ -37,10 +37,10 @@ class ChannelController extends Controller
         } else {
             $channel = new Channel;
             $channel->name = $name;
-            $channel->link = $link;
+            $channel->url  = $url;
             $channel->tags = $tags;
             if ($channel->save()) {
-                return redirect()->route('/channel/{cid}/success', ['cid' => $channel->id]);
+                return redirect('/channel/'.$channel->id.'/success');
             } else {
                 exit('some error 001');
             }
@@ -50,6 +50,7 @@ class ChannelController extends Controller
     // 显示二维码
     public function success(Request $request, $cid)
     {
+        exit('now you are here');
         // 显示二维码
     }
 
