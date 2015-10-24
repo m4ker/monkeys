@@ -158,11 +158,13 @@
 <!-- Plugin JavaScript -->
 <script src="/js/jquery.easing.min.js"></script>
 <script src="/js/classie.js"></script>
+<script src="/js/utils.js"></script>
 
 <!-- Custom Theme JavaScript -->
 
 <script>
     $(function() {
+
         if (localStorage.getItem('listType')) {
             var type = localStorage.getItem('listType');
             if (type == 'list') {
@@ -206,7 +208,13 @@
             $btn_other.addClass('btn-gray');            
             $('.user-info').hide();
             $('.user-matched').show();                         
-        }              
+        }
+
+        var eventCode = '{{ $channel->url }}';
+        var eventName = '{{ $channel->name }}';
+
+        addMyEvent(eventCode, eventName);
+
     });
 </script>
 

@@ -230,7 +230,7 @@
 -->
 <!-- Custom Theme JavaScript -->
 <script src="js/agency.js"></script>
-
+<script src="/js/utils.js"></script>
 </body>
 
 </html>

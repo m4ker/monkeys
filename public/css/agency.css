@@ -477,8 +477,23 @@ section h3.section-subheading {
     white-space: nowrap;
 }
 
-input[type=checkbox]:checked + label { 
-    background-color: red;
+.user-tag-checked {
+    background-color: #26A65B !important;
+}
+
+
+.my_event_list {
+    margin: 40px auto;
+    max-width: 100%;
+    width: 500px;
+}
+
+.event_list_item {
+    background-color: #E2F5E2;
+    padding: 15px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 @media(min-width:768px) {

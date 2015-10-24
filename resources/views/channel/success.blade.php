@@ -89,9 +89,15 @@
 <!-- Plugin JavaScript -->
 <script src="/js/jquery.easing.min.js"></script>
 <script src="/js/classie.js"></script>
-
+<script src="/js/utils.js"></script>
 <!-- Custom Theme JavaScript -->
 
+<script>
+    var eventCode = '{{ $channel->url }}';
+    var eventName = '{{ $channel->name }}';
+
+    addMyEvent('<?php echo $channel['url'];?>', '<?php echo $channel['name'];?>');
+</script>
 
 </body>
 
