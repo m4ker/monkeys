@@ -116,7 +116,7 @@
                                 <span class="user-info-icon"><i class="fa fa-{{ $className }} fa-lg"></i> :</span>
 
                             <?php if ($className == 'mobile-phone') {?>
-                                <span><a href="telto:{{ $list->contact  }}">{{ $list->contact  }}</a></span>
+                                <span><a href="tel:{{ $list->contact  }}">{{ $list->contact  }}</a></span>
                             <?php } else { ?>
                             <span>{{ $list->contact  }}</span>
                             <?php } ?>
