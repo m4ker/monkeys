@@ -352,8 +352,37 @@ section h3.section-subheading {
     background: #EDEDED;
     padding: 25px;    
 }
-.registration_summary div, .registration_summary p {
-    margin: 10px;
+
+.form-div {
+    font-size: 18px;
+}
+
+.form-div div, .form-div p {
+    margin: 20px;
+}
+
+.form-div input.input-text {
+    height: 45px;
+}
+
+.form-div .tag-label-txt {
+    margin-left: 0px;
+    margin-top: 12px;
+}
+
+.form-div label.tag-checkbox {
+    min-height: 20px;
+    padding-left: 29px;
+    padding-right: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #B7DCC6;
+    margin-right: 10px;
+    border-radius: 3px;
+}
+
+input[type=checkbox]:checked + label { 
+    background-color: red;
 }
 
 @media(min-width:768px) {
