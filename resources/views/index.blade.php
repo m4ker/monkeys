@@ -190,7 +190,7 @@
                             </div>
                             -->
                             <div class="form-group">
-                                <input type="text" name="tags" class="form-control" placeholder="用户标签(用逗号分隔，不区分全角半角) *" id="tags" required data-validation-required-message="请输入用户的标签(用逗号分隔)">
+                                <input type="text" name="tags" class="form-control" placeholder="用户标签（用逗号分隔，不区分全角半角） *" id="tags" required data-validation-required-message="请输入用户的标签(用逗号分隔)">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
