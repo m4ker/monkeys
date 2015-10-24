@@ -1,11 +1,22 @@
 # monkeys
 
-这是4 monkeys本次开发用的项目框架，采用laravel5.1。
+这是monkeys本次开发参加hackathon 2015用的项目框架，采用laravel5.1。
 
 请先确认本机环境是否满足laravel的运行环境。
 
 检出之后请确认 storeage 目录有写入权限。
 
+## 成员介绍
+
+王默 makerwang#gmail.com
+
+董红帅 663280439#qq.com
+
+马莹 1977905246#qq.com
+
+时晓冰 labsterx#gmail.com
+
+刘潇 seanliu707#gmail.com
 
 ## laravel 简要入门
 
@@ -37,4 +48,22 @@ http://www.golaravel.com/laravel/docs/5.1
 
 http://www.golaravel.com/laravel/docs/5.1/views/
 
-##马莹
+## 项目简介
+
+## 应用场景
+
+找队友
+
+找对象
+
+找工作
+
+找员工
+
+找到志同道合
+
+## 介绍
+
+组织者 / 组织机构 创建活动
+
+参与者 登记 & 查看
