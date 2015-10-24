@@ -80,18 +80,6 @@
     </div>
 </section>
 
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <span class="copyright">Copyright &copy; BiaoPei.org</span>
-            </div>
-        </div>
-    </div>
-</footer>
-
-
 <!-- jQuery -->
 <script src="/js/jquery.js"></script>
 
