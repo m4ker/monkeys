@@ -381,6 +381,49 @@ section h3.section-subheading {
     border-radius: 3px;
 }
 
+.user-info {
+    background-color: #EDEDED;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.user-wrapper {
+    width: 70px;
+    height: 70px;
+    background-color: #FFF;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.user-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+.user-info-wrapper div {
+    margin: 10px;
+}
+
+.user-info-icon {
+    color: #6E6E6E;
+}
+.user-name {
+    font-weight: bold;
+    /*font-size: 1.3em;*/
+    text-align: center;
+}
+
+.user-tag {
+    background-color: #BEE8D0;
+    padding: 4px 8px;
+    margin: 4px 4px;
+    border-radius: 3px;
+}
+
 input[type=checkbox]:checked + label { 
     background-color: red;
 }
