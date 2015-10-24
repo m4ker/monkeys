@@ -24,14 +24,17 @@ class UserController extends Controller
         }
     }
 
-    private function _userRegister(Request $request, $cid)
+    private function _userRegister(Request $request, $url)
     {
         //参数整理
+        $channelInfo = Channel::where('url', $url)->first();
+        $cid = $channelInfo['id'];
+
         $name = $request->input('name');
-        $tags = $request->input('tags');
+        $tags = str_replace('，', ',', $request->input('tags'));
         $contact = $request->input('contact');
         $channelId = $cid;
-        $findTags = $request->input('findTags');
+        $findTags = str_replace('，', ',', $request->input('findTags'));
         $error = '';
         if (empty($channelId)) {
             $error = 'hack！';
@@ -52,16 +55,16 @@ class UserController extends Controller
             if ($this->_checkUser($contact, $channelId)) {
                 return view('error', ['msg' => '当前用户已存在！']);
             } else {
-                $channel = new User();
-                $channel->name = $name;
-                $channel->channel_id = $channelId ? $channelId : time();
-                $channel->contact = $contact;
-                $channel->tags = implode(',', $tags);
-                $channel->find_tags = implode(',', $findTags);
-                if ($channel->save()) {
-                    $userId = $channel->id;
+                $user = new User();
+                $user->name = $name;
+                $user->channel_id = $channelId ? $channelId : time();
+                $user->contact = $contact;
+                $user->tags = implode(',', $tags);
+                $user->find_tags = implode(',', $findTags);
+                if ($user->save()) {
                     //创建不时效的Cookie
-                    return redirect('/event/' . $channel->channel_id . '/success')->withCookie('userId', $userId);
+                    return redirect('/event/' . $cid . '/suggest/' . $user->id . '/')->withCookie('userId_' . $cid,
+                        $user->id);
                 } else {
                     exit('some error 001');
                 }
@@ -69,6 +72,13 @@ class UserController extends Controller
         }
     }
 
+    /**
+     * 用户注册页
+     *
+     * @param Request $request
+     * @param $cid
+     * @return string
+     */
     private function _showUserRegister(Request $request, $cid)
     {
         $channelInfo = Channel::getChannelInfo($cid);
@@ -91,7 +101,7 @@ class UserController extends Controller
         //获取推荐列表
         $users = User::getSuggest($user);
 
-        return view('list', ['lists' => $users,'channel'=>$channel]);
+        return view('list', ['lists' => $users, 'channel' => $channel]);
     }
 
     private function _checkUser($contact, $channelId)
