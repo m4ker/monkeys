@@ -118,6 +118,16 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
+.btn-gray {
+    background-color: #CCC !important;
+    border-color: #CCC !important;
+}
+
+.btn-green {
+    background-color: #26A65B !important;
+    border-color: #26A65B !important;    
+}
+
 .btn-xl {
     padding: 15px 40px;
     border-color: #26A65B;
@@ -393,6 +403,11 @@ section h3.section-subheading {
     margin-bottom: 10px;
 }
 
+.user-matched {
+    background-color: #D3F3CD !important;
+}
+
+
 .user-wrapper {
     width: 70px;
     height: 70px;
@@ -405,9 +420,24 @@ section h3.section-subheading {
     margin-right: 20px;
 }
 
+.user-matched .user-wrapper {
+    background-color: #fcf8e3;
+
+}
+
+.user-matched .user-tag {
+    background-color: #FFF;
+
+}
+
+.user-matched .user-wrapper img {
+    opacity: 1;
+}
+
 .user-wrapper img {
     max-width: 100%;
     height: auto;
+    opacity: 0.6;
 }
 
 .user-info-wrapper div {

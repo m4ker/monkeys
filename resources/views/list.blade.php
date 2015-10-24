@@ -74,8 +74,8 @@
         </div>
 @else
         <div class="text-center" style="margin:20px">
-            <a href="/event/{{ $channel->url }}" class="btn btn-xl text-center">列表</a>
-            <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" class="btn btn-xl text-center">推荐</a>
+            <a href="/event/{{ $channel->url }}" id="btn-list" class="btn btn-xl text-center">列表</a>
+            <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" id="btn-match" class="btn btn-xl btn-gray text-center">推荐</a>
         </div>
 @endif
 @foreach ($lists as $list)
@@ -129,7 +129,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <span class="copyright">Copyright &copy; BiaoPei.org</span>
+                <!-- <span class="copyright">Copyright &copy; BiaoPei.org</span> -->
             </div>
         </div>
     </div>
@@ -148,6 +148,33 @@
 
 <!-- Custom Theme JavaScript -->
 
+<script>
+    $(function() {
+        $('#btn-match').bind('click', function(event) {
+            // alert('hello');
+            var $btn = $(this);
+            var $btn_other = $('#btn-list');
+            $btn.removeClass('btn-gray');
+            $btn.addClass('btn-green');
+            $btn_other.removeClass('btn-green');
+            $btn_other.addClass('btn-gray');            
+            $('.user-info').hide();
+            $('.user-matched').show();
+            event.preventDefault();
+        });
+        $('#btn-list').bind('click', function(event) {
+            // alert('hello');
+            var $btn = $(this);
+            var $btn_other = $('#btn-match');
+            $btn.removeClass('btn-gray');
+            $btn.addClass('btn-green');
+            $btn_other.removeClass('btn-green');
+            $btn_other.addClass('btn-gray');
+            $('.user-info').show();            
+            event.preventDefault();
+        });        
+    });
+</script>
 
 </body>
 
