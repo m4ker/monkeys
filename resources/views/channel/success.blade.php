@@ -68,11 +68,11 @@
                 <h2 class="section-heading">注册成功</h2>
                 <h3 class="text-muted">以下是您这次活动的注册信息</h3>
                 <div class="registration_summary">
-                    <div><strong>活动名称：</strong> 北京黑客马拉松</div>
-                    <div><strong>活动网址：</strong> <a href="#" target="_blank">http://www.biaopei.org/events/beijing_hackathon/</a></div>
+                    <div><strong>活动名称：</strong><?php echo $channel['name']; ?></div>
+                    <div><strong>活动网址：</strong> <a href="<?php echo $reVal['url']; ?>" target="_blank"><?php echo $reVal['url']; ?></a></div>
                     <div><strong>活动二维码：</strong></div>
                     <div class="text-center">
-                        <img src="/img/sample_qr_code.png" />
+                        <img src="<?php echo $reVal['src']; ?>" />
                     </div>
                 </div>
             </div>

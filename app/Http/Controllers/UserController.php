@@ -17,24 +17,23 @@ class UserController extends Controller
     {
         if ($request->isMethod('post')) {
             //register user
-            return $this->_userRegister($request);
+            return $this->_userRegister($request, $cid);
         } else {
             // view
-            return $this->_showUserRegister($request);
+            return $this->_showUserRegister($request, $cid);
         }
     }
 
-    private function _userRegister(Request $request)
+    private function _userRegister(Request $request, $cid)
     {
         //参数整理
         $name = $request->input('name');
         $tags = $request->input('tags');
-        $phone = $request->input('phone');
-        $email = $request->input('email');
-        $channelId = $request->input('channelId');
+        $contact = $request->input('contact');
+        $channelId = $cid;
         $findTags = $request->input('findTags');
         $error = '';
-        if (!empty($channel)) {
+        if (empty($channelId)) {
             $error = 'hack！';
         } elseif (empty($name)) {
             $error = '请填写姓名';
@@ -42,34 +41,44 @@ class UserController extends Controller
             $error = '请选择倾向内容';
         } elseif (empty($tags)) {
             $error = '请填写标签！';
-        } elseif (empty($phone)) {
-            $error = '请填写手机号！';
-        } elseif (empty($email)) {
-            $error = '请填写联系邮箱';
+        } elseif (empty($contact)) {
+            $error = '请填写联系方式！';
         }
         //处理错误，或添加数据
         if ($error) {
             return view('error', ['msg' => $error]);
         } else {
-            $channel = new User();
-            $channel->name = $name;
-            $channel->channel_id = $channelId ? $channel : time();
-            $channel->contact = $phone;
-            $channel->tags = $tags;
-            $channel->find_tags = implode(',', $findTags);
-            if ($channel->save()) {
-                $userId = $channel->id;
-                //创建不时效的Cookie
-                return redirect('/event/' . $channel->channel_id . '/success')->withCookie('userId', $userId);
+            //判断邮箱和手机号是否存在
+            if ($this->_checkUser($contact, $channelId)) {
+                return view('error', ['msg' => '当前用户已存在！']);
             } else {
-                exit('some error 001');
+                $channel = new User();
+                $channel->name = $name;
+                $channel->channel_id = $channelId ? $channelId : time();
+                $channel->contact = $contact;
+                $channel->tags = implode(',', $tags);
+                $channel->find_tags = implode(',', $findTags);
+                if ($channel->save()) {
+                    $userId = $channel->id;
+                    //创建不时效的Cookie
+                    return redirect('/event/' . $channel->channel_id . '/success')->withCookie('userId', $userId);
+                } else {
+                    exit('some error 001');
+                }
             }
         }
     }
 
-    private function _showUserRegister(Request $request)
+    private function _showUserRegister(Request $request, $cid)
     {
-        return view('user/register');
+        $channelInfo = Channel::getChannelInfo($cid);
+        $tags = $channelInfo['tags'];
+        $arrTags = explode(',', $tags);
+        if (empty($channelInfo)) {
+            return view('error', ['tags' => '渠道信息不存在']);
+        } else {
+            return view('/user/register', ['tags' => $arrTags, 'cid' => $cid]);
+        }
     }
 
     // 推荐用户
