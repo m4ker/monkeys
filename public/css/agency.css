@@ -418,7 +418,6 @@ section h3.section-subheading {
     background-color: #D3F3CD !important;
 }
 
-
 .user-wrapper {
     width: 70px;
     height: 70px;
@@ -427,8 +426,8 @@ section h3.section-subheading {
     border-radius: 50%;
     text-align: center;
     margin-bottom: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 .user-matched .user-wrapper {
@@ -452,11 +451,16 @@ section h3.section-subheading {
 }
 
 .user-info-wrapper div {
-    margin: 10px;
+    margin: 20px;
+}
+
+.user-info-wrapper td {
+    padding: 5px 2px;
 }
 
 .user-info-icon {
     color: #6E6E6E;
+    margin-left: 10px;
 }
 .user-name {
     font-weight: bold;

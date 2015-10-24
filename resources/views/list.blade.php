@@ -73,6 +73,7 @@
 @if(!Cookie::get('userId_'.$channel->url))
         <div class="text-center" style="margin:20px">
             <a href="/event/{{ $channel->url }}/register" class="btn btn-xl text-center">登记</a>
+            <a id="btn-reload" class="btn btn-xl btn-narrow text-center"><i class="fa fa-refresh fa-lg"></i></a>
         </div>
 @else
         <div class="text-center" style="margin:20px">
@@ -93,18 +94,27 @@
                     </td>
                     <td class="user-info-wrapper">
 
-                        <div>
+                    <table>
+                        <tr>
+                            <td style="white-space: nowrap">
                             <span class="user-info-icon"><i class="fa fa-user fa-lg"></i> :</span>
+                            </td>
+                            <td>
                             @foreach(explode(',',$list->tags) as $v)
                             <span class="user-tag">{{ $v }}</span>
                             @endforeach
-                        </div>
-                        <div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="white-space: nowrap">
                             <span class="user-info-icon"><i class="fa fa-search fa-lg"></i> :</span>
+                            </td>
+                            <td>
                             @foreach(explode(',',$list->find_tags) as $v)
                                 <span class="user-tag">{{ $v }}</span>
                             @endforeach
-                        </div>
+                            </td>
+                        </tr>
                         <?php
                             if (strpos($list->contact, '@')!== false) {
                                 $className = 'envelope-o';
@@ -114,10 +124,11 @@
                                 $className = 'comments-o';
                             }
                         ?>
-                        <div>
-
+                        <tr>
+                            <td style="white-space: nowrap">
                                 <span class="user-info-icon"><i class="fa fa-{{ $className }} fa-lg"></i> :</span>
-
+                            </td>
+                            <td style="padding-left: 5px">
                             <?php if ($className == 'mobile-phone') {?>
                                 <span><a href="tel:{{ $list->contact  }}">{{ $list->contact  }}</a></span>
                             <?php } else if ($className == 'envelope-o') { ?>
@@ -125,7 +136,10 @@
                             <?php } else { ?>
                             <span>{{ $list->contact  }}</span>
                             <?php } ?>
-                        </div>
+                            </td>
+                        </tr>
+
+                    </table>
                     </td>
                 </tr>
             </table>
