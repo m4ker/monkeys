@@ -75,7 +75,7 @@ class ChannelController extends Controller
             $users = User::getSuggest($user);
         }else
         {
-            $users = User::orderBy('id', 'desc')->get();
+            $users = User::where('channel_id',$channel['id'])->orderBy('id', 'desc')->get();
         }
         
         return view('list', ['lists' => $users,'channel' => $channel]);
