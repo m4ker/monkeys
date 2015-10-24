@@ -68,7 +68,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h2 class="section-heading text-center">活动注册</h2>
 
-                <h3 class="text-muted text-center">北京黑客马拉松</h3>
+                <h3 class="text-muted text-center">{{ $name }}}</h3>
 
                 <div class="form-div">
                     <div class="text-muted">请填写您的个人信息:</div>
@@ -82,7 +82,7 @@
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">联系方式</label>
-                            <input type="text" name="contact" class="input-text form-control" placeholder="手机">
+                            <input type="text" name="contact" class="input-text form-control" placeholder="微信/手机/邮箱">
                         </div>
 
                         <div class="checkbox">

@@ -88,9 +88,9 @@ class UserController extends Controller
         $tags = $channelInfo['tags'];
         $arrTags = explode(',', $tags);
         if (empty($channelInfo)) {
-            return view('error', ['msg' => '渠道信息不存在']);
+            return view('error', ['msg' => '参数错误']);
         } else {
-            return view('/user/register', ['tags' => $arrTags, 'url' => $channelInfo['url']]);
+            return view('/user/register', ['tags' => $arrTags, 'url' => $channelInfo['url'], 'name' => $channelInfo['name']]);
         }
     }
 

@@ -102,8 +102,17 @@
                                 <span class="user-tag">{{ $v }}</span>
                             @endforeach
                         </div>
+                        <?php
+                            if (strpos($list->contact, '@')!== false) {
+                                $className = 'envelope-o';
+                            } else if (is_numeric($list->contact) && strlen($list->contact) == 11) {
+                                $className = 'mobile-phone';
+                            } else {
+                                $className = 'comments-o';
+                            }
+                        ?>
                         <div>
-                            <span class="user-info-icon"><i class="fa fa-comments-o fa-lg"></i> :</span>
+                            <span class="user-info-icon"><i class="fa fa-{{ $className }} fa-lg"></i> :</span>
                             <span>{{ $list->contact  }}</span>
                         </div>
                     </td>
