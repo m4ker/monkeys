@@ -76,7 +76,7 @@
 @else
         <div class="text-center" style="margin:20px">
             <a href="/event/{{ $channel->url }}" class="btn btn-xl text-center">列表</a>
-            <a href="/event/{{ $channel->id }}/suggest/{{ Cookie::get('userId') }}" class="btn btn-xl text-center">推荐</a>
+            <a href="/event/suggest/{{ Cookie::get('userId') }}" class="btn btn-xl text-center">推荐</a>
         </div>
 @endif
 @foreach ($lists as $list)

@@ -92,7 +92,7 @@ class UserController extends Controller
     }
 
     // 推荐用户
-    public function suggest(Request $request, $cid, $uid)
+    public function suggest(Request $request, $uid)
     {
         //获取用户信息
         $user = User::find($uid);
