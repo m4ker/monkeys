@@ -51,10 +51,10 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">关于我们</a>
+                    <a class="page-scroll" href="/#about">关于我们</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">注册活动</a>
+                    <a class="page-scroll" href="/#contact">注册活动</a>
                 </li>
             </ul>
         </div>
@@ -103,7 +103,7 @@
                             @endforeach
                         </div>
                         <div>
-                            <span class="user-info-icon"><i class="fa fa-envelope-o fa-lg"></i> :</span>
+                            <span class="user-info-icon"><i class="fa fa-comments-o fa-lg"></i> :</span>
                             <span>{{ $list->contact  }}</span>
                         </div>
                     </td>
