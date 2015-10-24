@@ -93,4 +93,10 @@ class UserController extends Controller
         return view('suggest_list', ['lists' => $users]);
     }
 
+    private function _checkUser($contact, $channelId)
+    {
+        $hasUser = User::where('contact', $contact)->where('channel_id', $channelId)->count();
+        return !empty($hasUser) ? true : false;
+    }
+
 }
