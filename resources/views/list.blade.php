@@ -68,8 +68,7 @@
 
         <h2 class="section-heading text-center">参会人列表</h2>
         <h3 class="text-muted text-center">{{ $channel->name }}</h3>
-        <?php $_COOKIE['userId'] = 1; ?>
-@if(!Cookie::get('userId'))
+@if(!Cookie::get('userId_'.$channel->url))
         <div class="text-center" style="margin:20px">
             <a href="/event/{{ $channel->id }}/register" class="btn btn-xl text-center">注册</a>
         </div>
