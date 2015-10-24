@@ -72,7 +72,7 @@
         -->
 @if(!Cookie::get('userId_'.$channel->url))
         <div class="text-center" style="margin:20px">
-            <a href="/event/{{ $channel->url }}/register" class="btn btn-xl text-center">注册</a>
+            <a href="/event/{{ $channel->url }}/register" class="btn btn-xl text-center">登记</a>
         </div>
 @else
         <div class="text-center" style="margin:20px">
