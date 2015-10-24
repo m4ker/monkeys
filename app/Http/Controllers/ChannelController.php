@@ -67,7 +67,7 @@ class ChannelController extends Controller
     {
         $channel = Channel::where('url', $url)->first();
 
-        if($userId = Cookie::get('userId_'.$channel['url']))
+        if($userId = $request->cookie('userId_'.$channel['url']))
         {
             $user = User::find($userId);
 
