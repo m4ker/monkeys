@@ -50,6 +50,10 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 
 ## 项目简介
 
+组织者 / 组织机构 创建活动
+
+参与者 登记 & 查看
+
 ## 应用场景
 
 找队友
@@ -62,8 +66,3 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 
 找到志同道合
 
-## 介绍
-
-组织者 / 组织机构 创建活动
-
-参与者 登记 & 查看
