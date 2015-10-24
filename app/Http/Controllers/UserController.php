@@ -61,7 +61,10 @@ class UserController extends Controller
                 $user->contact = $contact;
                 $user->tags = implode(',', array_filter($tags));
                 $user->find_tags = implode(',', array_filter($findTags));
-                if ($user->save()) {
+                $result = $user->save();
+
+                //var_dump($user);
+                if ($result) {
                     //创建不时效的Cookie
                     return redirect('/event/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
                         $user->id);
