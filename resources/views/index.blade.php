@@ -120,7 +120,7 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>活动参加者添加自己的标签，加入想要找的人的标签</h4> 
+                                <h4>活动参加者添加自己的标签，加入想要找的人的标签</h4>
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">用户可以选择自己的标签，也可以选择感兴趣的人的标签。</p>
@@ -171,7 +171,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">注册活动</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted"><!--Lorem ipsum dolor sit amet consectetur.--></h3>
             </div>
         </div>
         <div class="row">
@@ -190,7 +190,7 @@
                             </div>
                             -->
                             <div class="form-group">
-                                <input type="text" name="tags" class="form-control" placeholder="标签(用逗号分隔) *" id="tags" required data-validation-required-message="请输入活动的标签(用逗号分隔)">
+                                <input type="text" name="tags" class="form-control" placeholder="用户标签(用逗号分隔，不区分全角半角) *" id="tags" required data-validation-required-message="请输入用户的标签(用逗号分隔)">
                                 <p class="help-block text-danger"></p>
                             </div>
                         </div>
@@ -198,9 +198,6 @@
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
                             <button type="submit" class="btn btn-xl">注册活动</button>
-                            <!--
-                            <a href="event_registration_success.html" class="btn btn-xl">注册活动</a>
-                            -->
                         </div>
                     </div>
                 </form>
