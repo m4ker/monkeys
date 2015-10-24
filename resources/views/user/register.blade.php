@@ -50,10 +50,10 @@
                     <a href="#page-top"></a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#about">关于我们</a>
+                    <a class="page-scroll" href="/#about">关于我们</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">注册活动</a>
+                    <a class="page-scroll" href="/#contact">注册活动</a>
                 </li>
             </ul>
         </div>
