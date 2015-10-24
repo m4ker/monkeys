@@ -69,8 +69,10 @@
 <section class="info_section">
     <div class="container">
 
-        <h2 class="section-heading text-center">参会人列表</h2>
+        <h2 class="section-heading text-center">{{ $channel->name }}</h2>
+        <!--
         <h3 class="text-muted text-center">{{ $channel->name }}</h3>
+        -->
 @if(!Cookie::get('userId_'.$channel->url))
         <div class="text-center" style="margin:20px">
             <a href="/event/{{ $channel->url }}/register" class="btn btn-xl text-center">注册</a>
