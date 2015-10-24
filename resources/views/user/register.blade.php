@@ -53,7 +53,7 @@
                     <a class="page-scroll" href="/">首页</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/#contact">注册活动</a>
+                    <a class="page-scroll" href="/#contact">创建活动</a>
                 </li>
             </ul>
         </div>

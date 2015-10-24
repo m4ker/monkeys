@@ -52,7 +52,7 @@
                     <a class="page-scroll" href="#about">关于我们</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#contact">注册活动</a>
+                    <a class="page-scroll" href="#contact">创建活动</a>
                 </li>
             </ul>
         </div>
@@ -71,7 +71,7 @@
             <div class="intro-heading">找到你最想找的人</div>
             <div class="intro-lead-in">让陌生人不再陌生</div>
             <a href="#about" class="page-scroll btn btn-xl">了解更多</a>
-            <a href="#contact" class="page-scroll btn btn-xl">立即注册</a>
+            <a href="#contact" class="page-scroll btn btn-xl">创建活动</a>
         </div>
     </div>
 </header>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>主办方注册活动，添加标签，获得活动二维码</h4>
+                                <h4>主办方创建活动，添加标签，获得活动二维码</h4>
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">活动组织者可以在“标配”上创建活动，并给活动设置用户属性标签，提交后可以获得活动链接和二维码。</p>
@@ -165,7 +165,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
-                <h2 class="section-heading">注册活动</h2>
+                <h2 class="section-heading">创建活动</h2>
                 <h3 class="section-subheading text-muted"><!--Lorem ipsum dolor sit amet consectetur.--></h3>
             </div>
         </div>
@@ -192,7 +192,7 @@
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
-                            <button type="submit" class="btn btn-xl">注册活动</button>
+                            <button type="submit" class="btn btn-xl">创建活动</button>
                         </div>
                     </div>
                 </form>
