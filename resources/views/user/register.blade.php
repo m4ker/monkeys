@@ -68,7 +68,7 @@
             <div class="col-md-8 col-md-offset-2">
                 <h2 class="section-heading text-center">活动注册</h2>
 
-                <h3 class="text-muted text-center">{{ $name }}}</h3>
+                <h3 class="text-muted text-center">{{ $name }}</h3>
 
                 <div class="form-div">
                     <div class="text-muted">请填写您的个人信息:</div>
