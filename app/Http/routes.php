@@ -23,7 +23,7 @@ Route::post('/channel/create', 'ChannelController@create');
 Route::get('/channel/{cid}/success', 'ChannelController@success');
 
 // 频道用户列表
-Route::get('/channel/{cid}', 'ChannelController@list');
+Route::get('/channel/{cid}', 'ChannelController@user_list');
 // 登记
 Route::get('/channel/{cid}/register', 'UserController@register');
 // 登记后端

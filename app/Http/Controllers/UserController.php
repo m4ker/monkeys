@@ -73,9 +73,15 @@ class UserController extends Controller
     }
 
     // 推荐用户
-    public function seggest(Request $request, $cid, $uid)
+    public function suggest(Request $request, $cid, $uid)
     {
-        //
+        //获取用户信息
+        $user = User::find($uid);
+
+        //获取推荐列表
+        $users = User::getSuggest($user);
+
+        return view('suggest_list', ['lists' => $users]);
     }
 
 }

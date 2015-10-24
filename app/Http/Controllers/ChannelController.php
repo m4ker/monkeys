@@ -50,13 +50,28 @@ class ChannelController extends Controller
     // 显示二维码
     public function success(Request $request, $cid)
     {
-        exit('now you are here');
+        $channel = Channel::find($cid);
+        $url = $channel['url'];
+        $width = 320;
+        $api = "http://qr.liantu.com/api.php?text=";
+        $reVal = array();
+        if (strpos($url, '&')) {
+            $url = str_replace('&', '%26', $url);
+        }
+        $reVal['src'] = $api . $url . '&el=h&w='. $width .'&m=10';
+        $reVal['size'] = $width;
+        
+        //return $_reVal;
+        return view('create_success', ['channel' => $channel,'reVal' => $reVal]);
         // 显示二维码
     }
 
     // 显示活动已登记成员列表
     public function user_list(Request $request, $cid)
     {
+        //获取当前channel_id 的用户列表
+        $users = User::getListByChannelId($cid);
 
+        return view('user_list', ['lists' => $users]);
     }
 }
