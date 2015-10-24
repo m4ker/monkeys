@@ -120,7 +120,7 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>活动参加者添加自己的标签，加入想要找的人的标签</h4>
+                                <h4>活动参加者添加自己的标签，加入想要找的人的标签</h4> 
                             </div>
                             <div class="timeline-body">
                                 <p class="text-muted">用户可以选择自己的标签，也可以选择感兴趣的人的标签。</p>
