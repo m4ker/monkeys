@@ -17,7 +17,7 @@ class User extends Model
         $find_tags = explode(',', $user['find_tags']);
 
         $users = User::where('channel_id', $user['channel_id'])
-            ->orderBy('name', 'asc')
+            ->orderBy('id', 'desc')
             ->get();
         foreach ($users as $key => $value) {
             $u_tags = explode(',', $value['tags']);
