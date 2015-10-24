@@ -60,7 +60,7 @@ class UserController extends Controller
             if ($channel->save()) {
                 $userId = $channel->id;
                 //创建不时效的Cookie
-                return redirect('/channel/' . $channel->channel_id . '/success')->withCookie('userId', $userId);
+                return redirect('/event/' . $channel->channel_id . '/success')->withCookie('userId', $userId);
             } else {
                 exit('some error 001');
             }

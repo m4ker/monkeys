@@ -16,19 +16,19 @@ Route::get('/', function(){
 	return view('index');
 });
 // 创建活动
-Route::get('/channel/create', 'ChannelController@create');
+Route::get('/event/create', 'ChannelController@create');
 // 创建活动后端
-Route::post('/channel/create', 'ChannelController@create');
+Route::post('/event/create', 'ChannelController@create');
 // 创建成功
-Route::get('/channel/{cid}/success', 'ChannelController@success');
+Route::get('/event/{cid}/success', 'ChannelController@success');
 
 // 频道用户列表
-Route::get('/channel/{cid}', 'ChannelController@user_list');
+Route::get('/event/{cid}', 'ChannelController@user_list');
 // 登记
-Route::get('/channel/{cid}/register', 'UserController@register');
+Route::get('/event/{cid}/register', 'UserController@register');
 // 登记后端
-Route::post('/channel/{cid}/register', 'UserController@register');
+Route::post('/event/{cid}/register', 'UserController@register');
 // 用户智能匹配
-Route::get('/channel/{cid}/suggest/{uid}', 'UserController@suggest');
+Route::get('/event/{cid}/suggest/{uid}', 'UserController@suggest');
 
 

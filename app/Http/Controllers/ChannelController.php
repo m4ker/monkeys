@@ -39,7 +39,7 @@ class ChannelController extends Controller
             $channel->url  = $url;
             $channel->tags = str_replace('，', ',', $tags);
             if ($channel->save()) {
-                return redirect('/channel/'.$channel->id.'/success');
+                return redirect('/event/'.$channel->id.'/success');
             } else {
                 return view('error', ['msg' => 'some error 001']);
             }
