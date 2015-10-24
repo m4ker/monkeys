@@ -103,7 +103,7 @@
                             @endforeach
                         </div>
                         <div>
-                            <span class="user-info-icon"><i class="fa fa-envelope-o fa-lg"></i> :</span>
+                            <span class="user-info-icon"><i class="fa fa-comments-o fa-lg"></i> :</span>
                             <span>{{ $list->contact  }}</span>
                         </div>
                     </td>
