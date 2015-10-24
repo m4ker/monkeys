@@ -71,7 +71,7 @@
             <div class="intro-heading">找到你最想找的人</div>
             <div class="intro-lead-in">让陌生人不再陌生</div>
             <a href="#about" class="page-scroll btn btn-xl">了解更多</a>
-
+            <a href="#contact" class="page-scroll btn btn-xl">立即注册</a>
         </div>
     </div>
 </header>
@@ -154,11 +154,6 @@
                         </div>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12 text-center" style="margin-top:100px">
-                <a href="#contact" class="page-scroll btn btn-xl">注册活动</a>
             </div>
         </div>
     </div>
