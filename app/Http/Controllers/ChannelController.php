@@ -55,9 +55,7 @@ class ChannelController extends Controller
         $reVal['src'] = $api . $url . '&el=h&w='. $width .'&m=10';
         $reVal['size'] = $width;
         
-        //return $_reVal;
         return view('channel/success', ['channel' => $channel,'reVal' => $reVal]);
-        // 显示二维码
     }
 
     // 显示活动已登记成员列表

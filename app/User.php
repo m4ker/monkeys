@@ -12,15 +12,34 @@ class User extends Model
 	*/
     static function getSuggest($user)
     {
-    	$users = User::where('channel_id', $user['channel_id'])
-    			->where(function($query) use ($user) {
-                    $query->where('tags', $user['find_tags'])
-                          ->orWhere('find_tags', $user['tags']);
-                })
-                //where('tags', $user['find_tags'])
+        $tags = explode(',',$user['tags']);
+        $find_tags = explode(',',$user['find_tags']);
+    	
+        $users = User::where('channel_id', $user['channel_id'])
                 ->orderBy('name', 'asc')
                 ->get();
-        return $users;
+        foreach($users as $key=>$value)
+        {
+            $u_tags      = explode(',',$value['tags']);
+            $u_find_tags = explode(',',$value['find_tags']);
+            foreach($tags as $k=>$v)
+            {
+                if(in_array($v,$u_find_tags))
+                {
+                    $data[] = $value;
+                    continue 2;
+                }
+            }
+            foreach($find_tags as $fk=>$fv)
+            {
+                if(in_array($fv,$u_tags))
+                {
+                    $data[] = $value;
+                    continue 2;
+                }
+            }
+        }
+        return $data;
     }
 
 	/*
