@@ -17,13 +17,15 @@ class ChannelController extends Controller
         $name = $request->input('name');
         $tags = $request->input('tags');
 
-        $url  = substr(md5(time()), 12 , 12);
+        $url = substr(md5(time()), 12, 12);
 
         $error = false;
         if (trim($name) == '') {
             $error = '请填写活动名称！';
-        } else if (trim($tags) == '') {
-            $error = '请填写成员标签！';
+        } else {
+            if (trim($tags) == '') {
+                $error = '请填写成员标签！';
+            }
         }
 
         if ($error) {
@@ -31,10 +33,11 @@ class ChannelController extends Controller
         } else {
             $channel = new Channel;
             $channel->name = $name;
-            $channel->url  = $url;
+            $channel->url = $url;
             $channel->tags = str_replace('，', ',', $tags);
+            $channel->tags = implode(',', array_filter(explode(',', $channel->tags)));
             if ($channel->save()) {
-                return redirect('/event/'.$channel->id.'/success');
+                return redirect('/event/' . $channel->id . '/success');
             } else {
                 return view('error', ['msg' => 'some error 001']);
             }
@@ -45,7 +48,7 @@ class ChannelController extends Controller
     public function success(Request $request, $cid)
     {
         $channel = Channel::find($cid);
-        $url = 'http://monkeys.com/event/'.$channel['url'];
+        $url = 'http://' . $_SERVER['HTTP_HOST'] . '/event/' . $channel['url'];
         $width = 320;
         $api = "http://qr.liantu.com/api.php?text=";
         $reVal = array();
@@ -53,20 +56,20 @@ class ChannelController extends Controller
             $url = str_replace('&', '%26', $url);
         }
         $reVal['url'] = $url;
-        $reVal['src'] = $api . $url . '&el=h&w='. $width .'&m=10';
+        $reVal['src'] = $api . $url . '&el=h&w=' . $width . '&m=10';
         $reVal['size'] = $width;
-        
-        return view('channel/success', ['channel' => $channel,'reVal' => $reVal]);
+
+        return view('channel/success', ['channel' => $channel, 'reVal' => $reVal]);
     }
 
     // 显示活动已登记成员列表
     public function user_list(Request $request, $url)
     {
-        $channel = Channel::where('url',$url)->first();
+        $channel = Channel::where('url', $url)->first();
 
         //获取当前channel_id 的用户列表
         $users = User::getListByChannelId($channel['id']);
 
-        return view('list', ['lists' => $users,'channel'=>$channel]);
+        return view('list', ['lists' => $users, 'channel' => $channel]);
     }
 }

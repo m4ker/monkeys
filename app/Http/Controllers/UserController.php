@@ -59,11 +59,11 @@ class UserController extends Controller
                 $user->name = $name;
                 $user->channel_id = $channelId ? $channelId : time();
                 $user->contact = $contact;
-                $user->tags = implode(',', $tags);
-                $user->find_tags = implode(',', $findTags);
+                $user->tags = implode(',', array_filter($tags));
+                $user->find_tags = implode(',', array_filter($findTags));
                 if ($user->save()) {
                     //创建不时效的Cookie
-                    return redirect('/event/' . $cid . '/suggest/' . $user->id . '/')->withCookie('userId_' . $cid,
+                    return redirect('/event/' . $url . '/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
                         $user->id);
                 } else {
                     exit('some error 001');
@@ -79,15 +79,15 @@ class UserController extends Controller
      * @param $cid
      * @return string
      */
-    private function _showUserRegister(Request $request, $cid)
+    private function _showUserRegister(Request $request, $url)
     {
-        $channelInfo = Channel::getChannelInfo($cid);
+        $channelInfo = Channel::getChannelInfo($url);
         $tags = $channelInfo['tags'];
         $arrTags = explode(',', $tags);
         if (empty($channelInfo)) {
-            return view('error', ['tags' => '渠道信息不存在']);
+            return view('error', ['msg' => '渠道信息不存在']);
         } else {
-            return view('/user/register', ['tags' => $arrTags, 'cid' => $cid]);
+            return view('/user/register', ['tags' => $arrTags, 'url' => $channelInfo['url']]);
         }
     }
 
