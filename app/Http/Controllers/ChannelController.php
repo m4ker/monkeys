@@ -61,7 +61,7 @@ class ChannelController extends Controller
         $reVal['size'] = $width;
         
         //return $_reVal;
-        return view('create_success', ['channel' => $channel,'reVal' => $reVal]);
+        return view('channel/success', ['channel' => $channel,'reVal' => $reVal]);
         // 显示二维码
     }
 
@@ -71,6 +71,6 @@ class ChannelController extends Controller
         //获取当前channel_id 的用户列表
         $users = User::getListByChannelId($cid);
 
-        return view('user_list', ['lists' => $users]);
+        return view('channel/list', ['lists' => $users]);
     }
 }

@@ -184,7 +184,7 @@
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
-                                <input type="email" name="url" class="form-control" placeholder="活动链接（如：beijing_hackathon) *" id="link" required data-validation-required-message="请输入活动链接">
+                                <input type="text" name="url" class="form-control" placeholder="活动链接（如：beijing_hackathon) *" id="link" required data-validation-required-message="请输入活动链接">
                                 <p class="help-block text-danger"></p>
                             </div>
                             <div class="form-group">
@@ -195,7 +195,10 @@
                         <div class="clearfix"></div>
                         <div class="col-lg-12 text-center">
                             <div id="success"></div>
+                            <button type="submit" class="btn btn-xl">注册活动</button>
+                            <!--
                             <a href="event_registration_success.html" class="btn btn-xl">注册活动</a>
+                            -->
                         </div>
                     </div>
                 </form>
@@ -227,9 +230,10 @@
 <script src="js/cbpAnimatedHeader.js"></script>
 
 <!-- Contact Form JavaScript -->
+<!--
 <script src="js/jqBootstrapValidation.js"></script>
 <script src="js/contact_me.js"></script>
-
+-->
 <!-- Custom Theme JavaScript -->
 <script src="js/agency.js"></script>
 
