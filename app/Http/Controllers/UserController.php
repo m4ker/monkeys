@@ -113,4 +113,10 @@ class UserController extends Controller
         return !empty($hasUser) ? true : false;
     }
 
+    // 我的活动
+    public function my_event(Request $request)
+    {
+        return view('user.myevent');
+    }
+
 }
