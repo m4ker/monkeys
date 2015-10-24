@@ -12,6 +12,9 @@
 
     <title>标配</title>
 
+    <!-- Refresh Page -->
+    <meta http-equiv="Refresh" content="5">
+
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -156,29 +159,45 @@
 
 <script>
     $(function() {
+        if (localStorage.getItem('listType')) {
+            var type = localStorage.getItem('listType');
+            if (type == 'list') {
+                clickList();
+            }
+            else if (type == 'match') {
+                clickMatch();
+            }
+        }
         $('#btn-match').bind('click', function(event) {
+            clickMatch();
+            localStorage.setItem("listType", "match");             
+            event.preventDefault();
+        });
+        $('#btn-list').bind('click', function(event) {
             // alert('hello');
-            var $btn = $(this);
+            clickList();
+            localStorage.setItem("listType", "list");             
+            event.preventDefault();
+        });  
+        function clickList () {
+            var $btn = $('#btn-list');
+            var $btn_other = $('#btn-match');
+            $btn.removeClass('btn-gray');
+            $btn.addClass('btn-green');
+            $btn_other.removeClass('btn-green');
+            $btn_other.addClass('btn-gray');
+            $('.user-info').show();
+        }
+        function clickMatch () {
+            var $btn = $('#btn-match');
             var $btn_other = $('#btn-list');
             $btn.removeClass('btn-gray');
             $btn.addClass('btn-green');
             $btn_other.removeClass('btn-green');
             $btn_other.addClass('btn-gray');            
             $('.user-info').hide();
-            $('.user-matched').show();
-            event.preventDefault();
-        });
-        $('#btn-list').bind('click', function(event) {
-            // alert('hello');
-            var $btn = $(this);
-            var $btn_other = $('#btn-match');
-            $btn.removeClass('btn-gray');
-            $btn.addClass('btn-green');
-            $btn_other.removeClass('btn-green');
-            $btn_other.addClass('btn-gray');
-            $('.user-info').show();            
-            event.preventDefault();
-        });        
+            $('.user-matched').show();                         
+        }              
     });
 </script>
 
