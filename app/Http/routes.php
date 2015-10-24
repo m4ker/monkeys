@@ -25,10 +25,10 @@ Route::get('/event/{cid}/success', 'ChannelController@success');
 // 频道用户列表
 Route::get('/event/{url}', 'ChannelController@user_list');
 // 登记
-Route::get('/event/{cid}/register', 'UserController@register');
+Route::get('/event/{url}/register', 'UserController@register');
 // 登记后端
-Route::post('/event/{cid}/register', 'UserController@register');
+Route::post('/event/{url}/register', 'UserController@register');
 // 用户智能匹配
-Route::get('/event/{cid}/suggest/{uid}', 'UserController@suggest');
+Route::get('/event/suggest/{uid}', 'UserController@suggest');
 
 

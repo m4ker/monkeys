@@ -99,3 +99,15 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 hackathon2015_beijing
 
 妹子，帅哥，IOS，PHP，Python，Android，前端，设计师，产品，硬件，C++，C，Ruby，Java，全栈，大叔
+
+## todo list
+
+联系方式
+
+样式调整
+
+文案调整
+
+标语调整
+
+演示流程
