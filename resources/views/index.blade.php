@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">关于我们</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                <h3 class="section-subheading text-muted">基于活动的轻社交应用。</h3>
             </div>
         </div>
         <div class="row">
@@ -97,7 +97,7 @@
                                 <h4>主办方注册活动，添加标签，获得活动二维码</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">活动组织者可以在“标配”上创建活动，并给活动设置用户属性标签，提交后可以获得活动链接和二维码。</p>
                             </div>
                         </div>
                     </li>
@@ -107,10 +107,10 @@
                         </div>
                         <div class="timeline-panel">
                             <div class="timeline-heading">
-                                <h4>活动参加者扫描二维码，注册账号</h4>
+                                <h4>活动参加者扫描二维码，登记信息</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">活动参与者可以扫描活动组织者提供的二维码，登记信息个人信息和感兴趣的用户标签。</p>
                             </div>
                         </div>
                     </li>
@@ -123,7 +123,7 @@
                                 <h4>活动参加者添加自己的标签，加入想要找的人的标签</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">用户可以选择自己的标签，也可以选择感兴趣的人的标签。</p>
                             </div>
                         </div>
                     </li>
@@ -136,7 +136,7 @@
                                 <h4>获得参加者获得匹配者的信息</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">通过其他用户提交的标签，可以智能推荐用户想找的人，或者想找该用户的人。</p>
                             </div>
                         </div>
                     </li>
@@ -149,7 +149,7 @@
                                 <h4>活动参加者互相交流</h4>
                             </div>
                             <div class="timeline-body">
-                                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                <p class="text-muted">根据用户登记的联系方式，可以与感兴趣的人进行线上/线下交流。</p>
                             </div>
                         </div>
                     </li>
