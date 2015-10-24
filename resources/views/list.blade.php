@@ -79,7 +79,7 @@
         </div>
 @endif
 @foreach ($lists as $list)
-        <div class="user-info">
+        <div class="user-info {{ $list->class }}">
             <table>
                 <tr>
                     <td>

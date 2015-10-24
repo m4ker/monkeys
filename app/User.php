@@ -24,16 +24,20 @@ class User extends Model
             $u_find_tags = explode(',', $value['find_tags']);
             foreach ($tags as $k => $v) {
                 if (in_array($v, $u_find_tags)) {
+                	$value['class'] = 'user-matched';
                     $data[] = $value;
                     continue 2;
                 }
             }
             foreach ($find_tags as $fk => $fv) {
                 if (in_array($fv, $u_tags)) {
+                	$value['class'] = 'user-matched';
                     $data[] = $value;
                     continue 2;
                 }
             }
+            $value['class'] = '';
+            $data[] = $value;
         }
         return $data;
     }

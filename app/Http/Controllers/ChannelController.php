@@ -67,9 +67,17 @@ class ChannelController extends Controller
     {
         $channel = Channel::where('url', $url)->first();
 
-        //获取当前channel_id 的用户列表
-        $users = User::getListByChannelId($channel['id']);
+        if($userId = Cookie::get('userId_'.$channel['url']))
+        {
+            $user = User::find($userId);
 
-        return view('list', ['lists' => $users, 'channel' => $channel]);
+            //获取推荐列表
+            $users = User::getSuggest($user);
+        }else
+        {
+            $users = User::all();
+        }
+        
+        return view('list', ['lists' => $users,'channel' => $channel]);
     }
 }
