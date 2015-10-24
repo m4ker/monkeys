@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>标配</title>
+    <title>标配 - 基于主题活动的轻社交</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -82,7 +82,7 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading">关于我们</h2>
-                <h3 class="section-subheading text-muted">基于活动的轻社交应用。</h3>
+                <h3 class="section-subheading text-muted">基于主题活动的轻社交应用。</h3>
             </div>
         </div>
         <div class="row">
