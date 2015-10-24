@@ -70,7 +70,7 @@
         <h3 class="text-muted text-center">{{ $channel->name }}</h3>
 @if(!Cookie::get('userId_'.$channel->url))
         <div class="text-center" style="margin:20px">
-            <a href="/event/{{ $channel->id }}/register" class="btn btn-xl text-center">注册</a>
+            <a href="/event/{{ $channel->url }}/register" class="btn btn-xl text-center">注册</a>
         </div>
 @else
         <div class="text-center" style="margin:20px">

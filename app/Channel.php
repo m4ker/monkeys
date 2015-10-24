@@ -13,10 +13,10 @@ class Channel extends Model
      * @param $cid
      * @return mixed
      */
-    static function getChannelInfo($cid)
+    static function getChannelInfo($url)
     {
-        $users = Channel::find($cid);
-        return $users;
+        $info = Channel::where('url', $url)->first()->toArray();
+        return $info;
     }
 
 }

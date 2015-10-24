@@ -73,7 +73,7 @@
                 <div class="form-div">
                     <div class="text-muted">请填写您的个人信息:</div>
 
-                    <form name="userRegister" method="POST" action="/event/<?php echo $cid; ?>/register">
+                    <form name="userRegister" method="POST" action="/event/<?php echo $url; ?>/register">
 
                         <div class="form-group">
                             <label for="name">姓名</label>
