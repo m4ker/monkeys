@@ -45,13 +45,14 @@ class ChannelController extends Controller
     public function success(Request $request, $cid)
     {
         $channel = Channel::find($cid);
-        $url = $channel['url'];
+        $url = 'http://monkeys.com/event/'.$channel['url'];
         $width = 320;
         $api = "http://qr.liantu.com/api.php?text=";
         $reVal = array();
         if (strpos($url, '&')) {
             $url = str_replace('&', '%26', $url);
         }
+        $reVal['url'] = $url;
         $reVal['src'] = $api . $url . '&el=h&w='. $width .'&m=10';
         $reVal['size'] = $width;
         
@@ -59,10 +60,12 @@ class ChannelController extends Controller
     }
 
     // 显示活动已登记成员列表
-    public function user_list(Request $request, $cid)
+    public function user_list(Request $request, $url)
     {
+        $channel = Channel::where('url',$url)->first();
+
         //获取当前channel_id 的用户列表
-        $users = User::getListByChannelId($cid);
+        $users = User::getListByChannelId($channel['id']);
 
         return view('channel/list', ['lists' => $users]);
     }
