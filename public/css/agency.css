@@ -118,7 +118,7 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-xl {
-    padding: 20px 40px;
+    padding: 15px 40px;
     border-color: #26A65B;
     border-radius: 3px;
     text-transform: uppercase;
@@ -363,6 +363,8 @@ section h3.section-subheading {
 
 .form-div input.input-text {
     height: 45px;
+    border-radius: 0;
+    border: 1px solid #B5DBC5;    
 }
 
 .form-div .tag-label-txt {
@@ -378,7 +380,8 @@ section h3.section-subheading {
     padding-bottom: 8px;
     background-color: #B7DCC6;
     margin-right: 10px;
-    border-radius: 3px;
+    border-radius: 2px;
+    margin-bottom: 5px;
 }
 
 .user-info {
@@ -421,7 +424,7 @@ section h3.section-subheading {
     background-color: #BEE8D0;
     padding: 4px 8px;
     margin: 4px 4px;
-    border-radius: 3px;
+    border-radius: 2px;
 }
 
 input[type=checkbox]:checked + label { 
