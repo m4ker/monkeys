@@ -67,7 +67,7 @@ class UserController extends Controller
                 if ($result) {
                     //创建不时效的Cookie
                     return redirect('/event/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
-                        $user->id);
+                        $user->id, 365 * 24 * 60 * 60);
                 } else {
                     exit('some error 001');
                 }
