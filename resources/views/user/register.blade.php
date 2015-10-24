@@ -66,7 +66,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <h2 class="section-heading text-center">活动注册</h2>
+                <h2 class="section-heading text-center">登记信息</h2>
 
                 <h3 class="text-muted text-center">{{ $name }}</h3>
 
