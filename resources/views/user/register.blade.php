@@ -33,13 +33,14 @@
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/"><img class="header-logo" src="/img/logo-white.png" /></a>
+            <a class="navbar-brand page-scroll" href="/"><img class="header-logo" src="/img/logo-white.png"/></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -66,11 +67,13 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h2 class="section-heading text-center">活动注册</h2>
+
                 <h3 class="text-muted text-center">北京黑客马拉松</h3>
+
                 <div class="form-div">
                     <div class="text-muted">请填写您的个人信息:</div>
 
-                    <form>
+                    <form name="userRegister" method="POST" action="/event/<?php echo $cid; ?>/register">
 
                         <div class="form-group">
                             <label for="name">姓名</label>
@@ -78,33 +81,36 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" name="email" class="input-text form-control" placeholder="Email">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">手机</label>
-                            <input type="text" name="phone" class="input-text form-control" placeholder="手机">
+                            <label for="exampleInputPassword1">联系方式</label>
+                            <input type="text" name="contact" class="input-text form-control" placeholder="手机">
                         </div>
 
                         <div class="checkbox">
                             <div class="tag-label-txt"><strong>我的标签：</strong></div>
+                            <?php
+                            foreach ($tags as $tag) {
+                            ?>
                             <label class="tag-checkbox">
-                                <input type="checkbox" class="input-checkbox">HTML
+                                <input type="checkbox" value="<?php echo $tag; ?>" name="tags[]"
+                                       class="input-checkbox"><?php echo $tag; ?>
                             </label>
-                            <label class="tag-checkbox">
-                                <input type="checkbox" class="input-checkbox">前端工程师
-                            </label>
+                            <?php
+                            }
+                            ?>
                         </div>
 
                         <div class="checkbox">
                             <div class="tag-label-txt"><strong>我要找的人的标签：</strong></div>
+                            <?php
+                            foreach ($tags as $tag) {
+                            ?>
                             <label class="tag-checkbox">
-                                <input type="checkbox" class="input-checkbox">JavaScript
+                                <input type="checkbox" value="<?php echo $tag; ?>" name="findTags[]"
+                                       class="input-checkbox"><?php echo $tag; ?>
                             </label>
-                            <label class="tag-checkbox">
-                                <input type="checkbox" class="input-checkbox">后端工程师
-                            </label>
+                            <?php
+                            }
+                            ?>
                         </div>
 
                         <div class="text-center">
