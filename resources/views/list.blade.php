@@ -12,9 +12,6 @@
 
     <title>标配</title>
 
-    <!-- Refresh Page -->
-    <meta http-equiv="Refresh" content="5">
-
     <!-- Bootstrap Core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -81,6 +78,7 @@
         <div class="text-center" style="margin:20px">
             <a href="/event/{{ $channel->url }}" id="btn-list" class="btn btn-xl text-center">列表</a>
             <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" id="btn-match" class="btn btn-xl btn-gray text-center">推荐</a>
+            <a id="btn-reload" class="btn btn-xl btn-narrow text-center"><i class="fa fa-refresh fa-lg"></i></a>
         </div>
 @endif
 @foreach ($lists as $list)
@@ -182,7 +180,12 @@
             clickList();
             localStorage.setItem("listType", "list");             
             event.preventDefault();
-        });  
+        }); 
+        $('#btn-reload').bind('click', function(event) {
+            // alert('hello');
+            location.reload();           
+            event.preventDefault();
+        });        
         function clickList () {
             var $btn = $('#btn-list');
             var $btn_other = $('#btn-match');

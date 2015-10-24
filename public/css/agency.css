@@ -118,9 +118,14 @@ fieldset[disabled] .btn-primary.active {
     background-color: #fff;
 }
 
-.btn-gray {
+.btn-gray, .btn-narrow {
     background-color: #CCC !important;
     border-color: #CCC !important;
+}
+
+.btn-gray:hover, .btn-gray:active,
+.btn-narrow:hover, .btn-narrow:active {
+    background-color: #999 !important;
 }
 
 .btn-green {
@@ -138,6 +143,11 @@ fieldset[disabled] .btn-primary.active {
     font-weight: 700;
     color: #fff;
     background-color: #26A65B;
+}
+
+.btn-narrow {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
 
 .btn-xl:hover,
@@ -395,6 +405,7 @@ section h3.section-subheading {
     margin-right: 10px;
     border-radius: 2px;
     margin-bottom: 5px;
+    white-space: nowrap;
 }
 
 .user-info {
@@ -458,6 +469,8 @@ section h3.section-subheading {
     padding: 4px 8px;
     margin: 4px 4px;
     border-radius: 2px;
+    line-height: 2em;
+    white-space: nowrap;
 }
 
 input[type=checkbox]:checked + label { 
