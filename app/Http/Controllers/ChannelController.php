@@ -17,9 +17,7 @@ class ChannelController extends Controller
         $name = $request->input('name');
         $url  = $request->input('url');
         $tags = $request->input('tags');
-        //var_dump($_POST);
-        //var_dump($name);
-        //exit;
+
         $error = false;
         if (trim($name) == '') {
             $error = '请填写活动名称！';
@@ -28,21 +26,22 @@ class ChannelController extends Controller
         } else if (trim($tags) == '') {
             $error = '请填写成员标签！';
         } else {
-            if (0) {
-                $error = '您选择的标签已经被使用了！';
+            if (Channel::where('url', $url)->count() > 0) {
+                $error = '您选择的地址已经被使用了！';
             }
         }
+
         if ($error) {
             return view('error', ['msg' => $error]);
         } else {
             $channel = new Channel;
             $channel->name = $name;
             $channel->url  = $url;
-            $channel->tags = $tags;
+            $channel->tags = str_replace('，', ',', $tags);
             if ($channel->save()) {
                 return redirect('/channel/'.$channel->id.'/success');
             } else {
-                exit('some error 001');
+                return view('error', ['msg' => 'some error 001']);
             }
         }
     }
