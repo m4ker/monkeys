@@ -15,20 +15,15 @@ class ChannelController extends Controller
     public function create(Request $request)
     {
         $name = $request->input('name');
-        $url  = $request->input('url');
         $tags = $request->input('tags');
+
+        $url  = substr(md5(time()), 12 , 12);
 
         $error = false;
         if (trim($name) == '') {
             $error = '请填写活动名称！';
-        } else if (trim($url) == '') {
-            $error = '请填写活动地址！';
         } else if (trim($tags) == '') {
             $error = '请填写成员标签！';
-        } else {
-            if (Channel::where('url', $url)->count() > 0) {
-                $error = '您选择的地址已经被使用了！';
-            }
         }
 
         if ($error) {

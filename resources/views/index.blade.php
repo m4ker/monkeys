@@ -183,10 +183,12 @@
                                 <input type="text" name="name" class="form-control" placeholder="活动名称（如：北京黑客马拉松） *" id="name" required data-validation-required-message="请输入活动名称">
                                 <p class="help-block text-danger"></p>
                             </div>
+                            <!--
                             <div class="form-group">
                                 <input type="text" name="url" class="form-control" placeholder="活动链接（如：beijing_hackathon) *" id="link" required data-validation-required-message="请输入活动链接">
                                 <p class="help-block text-danger"></p>
                             </div>
+                            -->
                             <div class="form-group">
                                 <input type="text" name="tags" class="form-control" placeholder="标签(用逗号分隔) *" id="tags" required data-validation-required-message="请输入活动的标签(用逗号分隔)">
                                 <p class="help-block text-danger"></p>

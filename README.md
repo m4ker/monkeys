@@ -50,6 +50,8 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 
 ## 项目简介
 
+活动社交
+
 标配 http://biaopei.org
 
 组织者 / 组织机构 创建活动
@@ -62,7 +64,7 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 
     “有没有前端来我们团队？”
 
-    “边上妹子不错，要是有微信号就好了”
+    “有个妹子不错，要是有微信号就好了”
 
     ”想找几个志同道合的基友“
 
@@ -89,3 +91,11 @@ http://www.golaravel.com/laravel/docs/5.1/views/
 微信授权
 
 社交 群聊 留言
+
+## 实例
+
+黑客马拉松
+
+hackathon2015_beijing
+
+妹子，帅哥，IOS，PHP，Python，Android，前端，设计师，产品，硬件，C++，C，Ruby，Java，全栈，大叔
