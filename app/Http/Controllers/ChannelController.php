@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Channel;
+use App\User;
 
-class Channel extends Controller
+class ChannelController extends Controller
 {
 
     // 创建活动
@@ -14,8 +16,10 @@ class Channel extends Controller
     {
         if ($request->isMethod('post')) {
             // save to mysql
+
         } else {
             // view
+
         }
     }
 

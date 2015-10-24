@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Channel;
+use App\User;
 
-class User extends Controller
+class UserController extends Controller
 {
     // 用户登记
     public function register(Request $request, $cid)
