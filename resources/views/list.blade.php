@@ -17,7 +17,7 @@
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/css/agency.css" rel="stylesheet">
+    <link href="/css/agency.css?<?php echo time();?>" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -148,18 +148,6 @@
 
     </div>
 </section>
-
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <!-- <span class="copyright">Copyright &copy; BiaoPei.org</span> -->
-            </div>
-        </div>
-    </div>
-</footer>
-
 
 <!-- jQuery -->
 <script src="/js/jquery.js"></script>
