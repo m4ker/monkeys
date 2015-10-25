@@ -140,20 +140,7 @@
 <script>
     $(function() {
 
-        // $('.tag-checkbox').bind('click', function(event) {
-        //     // event.stopPropagation();
-        //     // console.log('tag click');
-        //     if ( $( this ).hasClass( "user-tag-checked" ) ) {
-        //         $( this ).removeClass('user-tag-checked');
-        //     }
-        //     else {
-        //         $( this ).addClass('user-tag-checked');
-        //     }
-        // });
- 
          $('.input-checkbox').bind('change', function(event) {
-            // event.stopPropagation();
-            // console.log('checkbox click');
             if ( $( this ).parent().hasClass( "user-tag-checked" ) ) {
                 $( this ).parent().removeClass('user-tag-checked');
             }
