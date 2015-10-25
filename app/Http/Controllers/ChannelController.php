@@ -66,6 +66,10 @@ class ChannelController extends Controller
     public function user_list(Request $request, $url)
     {
         $channel = Channel::where('url', $url)->first();
+        if(empty($channel))
+        {
+            return view('error', ['msg' => '链接失效']);
+        }
 
         if($userId = $request->cookie('userId_'.$channel['url']))
         {

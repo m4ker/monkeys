@@ -28,7 +28,5 @@ Route::get('/event/{url}', 'ChannelController@user_list');
 Route::get('/event/{url}/register', 'UserController@register');
 // 登记后端
 Route::post('/event/{url}/register', 'UserController@register');
-// 用户智能匹配
-Route::get('/event/suggest/{uid}', 'UserController@suggest');
 //我的活动
 Route::get('/my_event', 'UserController@my_event');
