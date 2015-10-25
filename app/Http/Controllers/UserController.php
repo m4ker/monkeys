@@ -66,7 +66,7 @@ class UserController extends Controller
                 //var_dump($user);
                 if ($result) {
                     //创建不时效的Cookie
-                    return redirect('/event/suggest/' . $user->id . '/')->withCookie('userId_' . $url,
+                    return redirect('/event/' . $url . '/')->withCookie('userId_' . $url,
                         $user->id, 365 * 24 * 60 * 60);
                 } else {
                     exit('some error 001');
@@ -92,19 +92,6 @@ class UserController extends Controller
         } else {
             return view('/user/register', ['tags' => $arrTags, 'url' => $channelInfo['url'], 'name' => $channelInfo['name']]);
         }
-    }
-
-    // 推荐用户
-    public function suggest(Request $request, $uid)
-    {
-        //获取用户信息
-        $user = User::find($uid);
-
-        $channel = Channel::find($user['channel_id']);
-        //获取推荐列表
-        $users = User::getSuggest($user);
-
-        return view('list', ['lists' => $users, 'channel' => $channel]);
     }
 
     private function _checkUser($contact, $channelId)
