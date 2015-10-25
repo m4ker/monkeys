@@ -9,6 +9,7 @@ function getMyEvents() {
 }
 
 function isNewEvent(eventCode) {
+	console.log('isNewEvent');
 	var myEvents = getMyEvents();
 	if (myEvents) {
 		for (var i=0; i<myEvents.length; i++) {
@@ -17,8 +18,11 @@ function isNewEvent(eventCode) {
 				return false;
 			}
 		}
+		return true;
 	}
-	return true;	
+	else {
+		return true;
+	}	
 }
 
 function addMyEvent(eventCode, eventName) {

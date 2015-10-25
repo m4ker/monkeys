@@ -84,7 +84,9 @@
             <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" id="btn-match" class="btn btn-xl btn-gray text-center">匹配</a>
             <a id="btn-reload" class="btn btn-xl btn-narrow text-center"><i class="fa fa-refresh fa-lg"></i></a>
         </div>
+
 @endif
+<div class="text-center" style="margin-bottom: 15px">（全部: <span id="numTotal"></span>，匹配: <span id="numMatches"></span>）</div>
 @foreach ($lists as $list)
         <div class="user-info {{ $list->class }}">
             <table>
@@ -168,6 +170,13 @@
 <script>
     $(function() {
 
+        var numTotal = $('.user-info').length;
+        var numMatches = $('.user-matched').length;
+        $('#numTotal').text(numTotal);
+        $('#numMatches').text(numMatches);
+
+        clickMatch();
+
         var localKey = 'listType_{{ $channel->url }}';
 
         if (localStorage.getItem(localKey)) {
@@ -219,9 +228,14 @@
         var eventName = '{{ $channel->name }}';
 
         if(isNewEvent(eventCode)) {
-            if ($( ".user-matched" ).length > 0) {
+            console.log('is new event');
+            if (numMatches) {
+                console.log('have match');
                 clickMatch(); 
             }
+        }
+        else {
+            console.log('is old event');
         }
 
         addMyEvent(eventCode, eventName);
