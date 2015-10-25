@@ -358,7 +358,8 @@ section.info_section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: 500;
 }
 
 section h3.section-subheading {
@@ -763,6 +764,15 @@ section h3.section-subheading {
     .timeline>li.timeline-inverted>.timeline-panel {
         padding: 0 20px 20px;
     }
+}
+
+@media(max-width: 480px) {
+    header .intro-text .intro-heading {
+        font-size: 40px;
+    }
+    section.info_section {
+        padding: 75px 0;
+    }    
 }
 
 @media(min-width:1200px) {
