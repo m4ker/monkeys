@@ -168,8 +168,10 @@
 <script>
     $(function() {
 
-        if (localStorage.getItem('listType')) {
-            var type = localStorage.getItem('listType');
+        var localKey = 'listType_{{ $channel->url }}';
+
+        if (localStorage.getItem(localKey)) {
+            var type = localStorage.getItem(localKey);
             if (type == 'list') {
                 clickList();
             }
@@ -179,13 +181,13 @@
         }
         $('#btn-match').bind('click', function(event) {
             clickMatch();
-            localStorage.setItem("listType", "match");             
+            localStorage.setItem(localKey, "match");             
             event.preventDefault();
         });
         $('#btn-list').bind('click', function(event) {
             // alert('hello');
             clickList();
-            localStorage.setItem("listType", "list");             
+            localStorage.setItem(localKey, "list");             
             event.preventDefault();
         }); 
         $('#btn-reload').bind('click', function(event) {
