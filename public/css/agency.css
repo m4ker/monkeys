@@ -120,8 +120,8 @@ fieldset[disabled] .btn-primary.active {
 }
 
 .btn-gray, .btn-narrow {
-    background-color: #CCC !important;
-    border-color: #CCC !important;
+    background-color: #B7B7B7  !important;
+    border-color: #B7B7B7  !important;
 }
 
 .btn-gray:hover, .btn-gray:active,
@@ -160,9 +160,9 @@ fieldset[disabled] .btn-primary.active {
 .btn-xl:active,
 .btn-xl.active,
 .open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
+    border-color: #3c763d;
     color: #fff;
-    background-color: #fec503;
+    background-color: #3c763d;
 }
 
 .btn-xl:active,
@@ -371,6 +371,10 @@ section h3.section-subheading {
     font-weight: 400;
 }
 
+section#about {
+    background-color: #FFF;
+}
+
 .registration_summary {
     text-align: left;
     margin: 50px auto;
@@ -425,11 +429,11 @@ section h3.section-subheading {
     /*background-color: #EDEDED;*/
     padding: 15px;
     margin-bottom: 10px;
-    border: 1px solid #FFF;
+    /*border: 1px solid #FFF;*/
 }
 
 .user-matched {
-    background-color: #D3F3CD !important;
+    background-color: #C2E8BA  !important;
 }
 
 .user-wrapper {
