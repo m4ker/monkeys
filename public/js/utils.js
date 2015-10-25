@@ -14,11 +14,11 @@ function isNewEvent(eventCode) {
 		for (var i=0; i<myEvents.length; i++) {
 			var item = myEvents[i];
 			if (eventCode == item.code) {
-				return true;
+				return false;
 			}
 		}
 	}
-	return false;	
+	return true;	
 }
 
 function addMyEvent(eventCode, eventName) {
