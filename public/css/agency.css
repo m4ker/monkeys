@@ -354,7 +354,7 @@ section.info_section {
 section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
-    font-size: 40px;
+    font-size: 35px;
 }
 
 section h3.section-subheading {
@@ -401,7 +401,7 @@ section h3.section-subheading {
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #B7DCC6;
+    background-color: #E2E2E2;
     margin-right: 10px;
     border-radius: 2px;
     margin-bottom: 5px;
@@ -478,7 +478,8 @@ section h3.section-subheading {
 }
 
 .user-tag-checked {
-    background-color: #26A65B !important;
+    background-color: #5FCC8C !important;
+    color: #FFF;
 }
 
 
