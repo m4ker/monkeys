@@ -8,6 +8,7 @@ body {
     overflow-x: hidden;
     font-family: "Arial","Heiti SC","Microsoft Yahei",simsun,sans-serif;
     color: #4A4A4A;
+    background-color: #EDEDED;
 }
 
 .text-muted {
@@ -375,12 +376,16 @@ section h3.section-subheading {
     margin: 50px auto;
     max-width: 100%;
     width: 425px;
-    background: #E2F5E2;
+    /*background: #E2F5E2;*/
+    background-color: #FFF;
     padding: 25px;
     font-size: 16px;
     line-height: 1.9em;    
 }
 
+.registration_summary img {
+    max-width: 100%;  
+}
 .form-div {
     font-size: 18px;
 }
@@ -392,7 +397,8 @@ section h3.section-subheading {
 .form-div input.input-text {
     height: 45px;
     border-radius: 0;
-    border: 1px solid #B5DBC5;    
+    border: 1px solid #B5DBC5;  
+    border: 1px solid #DCDCDC;  
 }
 
 .form-div .tag-label-txt {
@@ -406,7 +412,8 @@ section h3.section-subheading {
     padding-right: 15px;
     padding-top: 8px;
     padding-bottom: 8px;
-    background-color: #E2E2E2;
+    /*background-color: #E2E2E2;*/
+    background-color: #D8D8D8;
     margin-right: 10px;
     border-radius: 2px;
     margin-bottom: 5px;
@@ -414,9 +421,11 @@ section h3.section-subheading {
 }
 
 .user-info {
-    background-color: #EDEDED;
+    background-color: #FFF;
+    /*background-color: #EDEDED;*/
     padding: 15px;
     margin-bottom: 10px;
+    border: 1px solid #FFF;
 }
 
 .user-matched {
@@ -495,7 +504,8 @@ section h3.section-subheading {
 }
 
 .event_list_item {
-    background-color: #E2F5E2;
+    /*background-color: #E2F5E2;*/
+    background-color: #FFF;
     padding: 15px 20px;
     font-size: 1.2em;
     font-weight: bold;

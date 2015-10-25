@@ -8,6 +8,19 @@ function getMyEvents() {
     }
 }
 
+function isNewEvent(eventCode) {
+	var myEvents = getMyEvents();
+	if (myEvents) {
+		for (var i=0; i<myEvents.length; i++) {
+			var item = myEvents[i];
+			if (eventCode == item.code) {
+				return true;
+			}
+		}
+	}
+	return false;	
+}
+
 function addMyEvent(eventCode, eventName) {
 	var myEvents = getMyEvents();
 	if (myEvents) {

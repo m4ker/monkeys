@@ -28,7 +28,7 @@
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="apple-touch-icon" href="/img/icon.png">
-    
+
 </head>
 
 <body id="page-top" class="index">
@@ -215,6 +215,12 @@
 
         var eventCode = '{{ $channel->url }}';
         var eventName = '{{ $channel->name }}';
+
+        if(isNewEvent(eventCode)) {
+            if ($( ".user-matched" ).length > 0) {
+                clickMatch(); 
+            }
+        }
 
         addMyEvent(eventCode, eventName);
 
