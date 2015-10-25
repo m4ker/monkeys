@@ -77,8 +77,8 @@
         </div>
 @else
         <div class="text-center" style="margin:20px">
-            <a href="/event/{{ $channel->url }}" id="btn-list" class="btn btn-xl text-center">列表</a>
-            <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" id="btn-match" class="btn btn-xl btn-gray text-center">推荐</a>
+            <a href="/event/{{ $channel->url }}" id="btn-list" class="btn btn-xl text-center">全部</a>
+            <a href="/event/suggest/{{ Cookie::get('userId_' . $channel->url) }}" id="btn-match" class="btn btn-xl btn-gray text-center">匹配</a>
             <a id="btn-reload" class="btn btn-xl btn-narrow text-center"><i class="fa fa-refresh fa-lg"></i></a>
         </div>
 @endif

@@ -145,6 +145,10 @@ fieldset[disabled] .btn-primary.active {
     background-color: #26A65B;
 }
 
+.info_section .btn-xl {
+    padding: 12px 35px;
+}
+
 .btn-narrow {
     padding-left: 15px !important;
     padding-right: 15px !important;
