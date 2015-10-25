@@ -7,7 +7,7 @@
 body {
     overflow-x: hidden;
     font-family: "Arial","Heiti SC","Microsoft Yahei",simsun,sans-serif;
-    color: #4A4A4A;
+    color: #444;
     background-color: #EDEDED;
 }
 
@@ -439,7 +439,7 @@ section#about {
 .user-wrapper {
     width: 70px;
     height: 70px;
-    background-color: #FFF;
+    background-color: #E7E8E8;
     padding: 10px;
     border-radius: 50%;
     text-align: center;
