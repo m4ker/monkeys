@@ -53,7 +53,7 @@
                     <a class="page-scroll" href="/">首页</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="/#contact">创建活动</a>
+                    <a class="page-scroll" href="/#contact">注册活动</a>
                 </li>
             </ul>
         </div>
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" class="btn btn-xl">注 册</button>
+                            <button type="submit" class="btn btn-xl">提 交</button>
                         </div>
 
                     </form>
@@ -126,46 +126,17 @@
 </section>
 
 <!-- jQuery -->
-<script src="/js/jquery.js"></script>
+<script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="/js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
 <!-- Plugin JavaScript -->
-<script src="/js/jquery.easing.min.js"></script>
-<script src="/js/classie.js"></script>
-<script src="/js/utils.js"></script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/classie.js"></script>
+
 <!-- Custom Theme JavaScript -->
 
-<script>
-    $(function() {
-
-        $('.tag-checkbox').bind('click', function(event) {
-            // console.log('tag click');
-            if ( $( this ).hasClass( "user-tag-checked" ) ) {
-                $( this ).removeClass('user-tag-checked');
-            }
-            else {
-                $( this ).addClass('user-tag-checked');
-            }
-        });
- 
-         $('.input-checkbox').bind('click', function(event) {
-            // console.log('checkbox click');
-            if ( $( this ).parent().hasClass( "user-tag-checked" ) ) {
-                $( this ).parent().removeClass('user-tag-checked');
-            }
-            else {
-                $( this ).parent().addClass('user-tag-checked');
-            }
-        });
-        var eventCode = '{{ $url }}';
-        var eventName = '{{ $name }}';
-
-        addMyEvent(eventCode, eventName);
-
-    });
-</script>
 
 </body>
 
